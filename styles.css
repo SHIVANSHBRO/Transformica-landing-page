@@ -1320,3 +1320,92 @@ body.intensity-loud .aurora::before,
 body.intensity-loud .aurora::after { opacity: .9; filter: blur(100px); }
 body.intensity-loud .float-badge { animation-duration: 4s; }
 body.intensity-loud .plan-card::before { height: 3px; }
+
+/* ============ Mobile (≤640px) ============ */
+.nav-cta-short { display: none; }
+
+@media (max-width: 640px) {
+  /* Nav */
+  .nav { padding: 10px 0; }
+  .nav-inner { gap: 10px; }
+  .brand { gap: 8px; }
+  .brand-mark { width: 34px; height: 34px; }
+  .brand-name { font-size: 20px; letter-spacing: -0.02em; }
+  .nav .btn { padding: 10px 16px; font-size: 14px; gap: 6px; }
+  .nav .btn svg { width: 14px; height: 14px; }
+  .nav-cta-full { display: none; }
+  .nav-cta-short { display: inline; }
+
+  /* Hero — shrink height/padding, keep phone visible but smaller */
+  .hero { min-height: auto; padding: 96px 0 56px; }
+  .hero-inner { gap: 28px; }
+  .hero-visual { min-height: 540px; height: 540px; }
+  .phone-stage { height: 540px; }
+  .phone { width: 260px; height: 560px; transform: translate(-50%, -50%) rotateY(-10deg) rotateX(6deg); }
+  h1.hero-title { font-size: clamp(40px, 11vw, 56px); margin: 16px 0 16px; }
+  .hero-sub { font-size: 15.5px; margin-bottom: 28px; }
+  .hero-cta { gap: 10px; margin-bottom: 28px; }
+  .hero-cta .btn { padding: 14px 22px; font-size: 14.5px; flex: 1; justify-content: center; }
+  .hero-trust { gap: 14px 18px; }
+  .hero-trust .item { font-size: 13px; gap: 8px; }
+  .hero-trust .item svg { width: 18px; height: 18px; }
+  .pill { padding: 8px 14px; font-size: 12.5px; }
+
+  /* Float badges — keep just two readable ones on phone, shrink */
+  .float-badge { padding: 10px 12px; gap: 10px; }
+  .float-badge .icon { width: 40px; height: 40px; border-radius: 10px; }
+  .float-badge .icon svg { width: 20px; height: 20px; }
+  .float-badge .val { font-size: 15px; }
+  .float-badge .lbl { font-size: 10px; }
+  .float-badge.b3, .float-badge.meal { display: none; }
+  .float-badge.b1 { top: 1%; right: 0; }
+  .float-badge.b2 { bottom: 1%; left: 0; }
+
+  /* Sections — tighten padding everywhere */
+  .section { padding: 72px 0; }
+  .section-head { margin-bottom: 36px; }
+  .section-title { font-size: clamp(28px, 7.5vw, 38px); }
+  .section-sub { margin-bottom: 36px; font-size: 15px; }
+  .stats-section { padding: 48px 0; }
+  .stat { padding: 22px 14px; }
+  .stat-num { font-size: 30px; }
+  .stat-lbl { font-size: 11px; letter-spacing: 0.06em; margin-top: 6px; }
+  .guarantee-section { padding: 72px 0; }
+  .final-cta { padding: 88px 0; }
+  .final-cta h2 { font-size: clamp(34px, 9vw, 52px); }
+  .trust-strip { padding: 22px 0; }
+  .marquee .feat { font-size: 14px; }
+
+  /* Plan */
+  .plan-card { padding: 32px 22px; border-radius: 24px; }
+  .plan-name { font-size: 34px; }
+  .price-amount { font-size: 58px; }
+  .feature-list li { font-size: 14.5px; }
+  .btn-xl { padding: 18px 26px; font-size: 16px; }
+
+  /* Testimonials / FAQ */
+  .testi { padding: 24px 20px; border-radius: 20px; }
+  .testi-quote { font-size: 15px; }
+  .faq-q { padding: 18px 20px; font-size: 15px; gap: 14px; }
+  .faq.open .faq-a { padding: 0 20px 20px; }
+  .faq-a { padding: 0 20px; font-size: 14px; }
+
+  /* Guarantee */
+  .guarantee-wrap { gap: 36px; }
+  .shield-big { max-width: 280px; }
+
+  /* Footer */
+  footer { padding: 48px 0 32px; }
+  .footer-inner { gap: 28px; }
+  .footer-bottom { font-size: 11.5px; text-align: center; justify-content: center; }
+}
+
+/* Extra-narrow safety (≤380px) */
+@media (max-width: 380px) {
+  .brand-name { font-size: 18px; }
+  .nav .btn { padding: 9px 13px; font-size: 13px; }
+  .nav .btn svg { width: 12px; height: 12px; }
+  h1.hero-title { font-size: 36px; }
+  .phone { width: 230px; height: 500px; }
+  .hero-visual, .phone-stage { height: 480px; min-height: 480px; }
+}

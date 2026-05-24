@@ -19,8 +19,10 @@ function Nav({ onCTAClick }) {
           <a href="#plan" className="nav-link">The Program</a>
           <a href="#results" className="nav-link">Results</a>
           <a href="#faq" className="nav-link">FAQ</a>
-          <button onClick={onCTAClick} className="btn btn-mint">
-            Start your transformation <Icon.Arrow size={20} />
+          <button onClick={onCTAClick} className="btn btn-mint nav-cta">
+            <span className="nav-cta-full">Start your transformation</span>
+            <span className="nav-cta-short">Start</span>
+            <Icon.Arrow size={20} />
           </button>
         </div>
       </div>
