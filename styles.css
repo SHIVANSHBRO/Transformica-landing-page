@@ -47,14 +47,24 @@ a { color: inherit; text-decoration: none; }
 .nav {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 50;
-  padding: 18px 0;
-  transition: backdrop-filter .3s, background .3s, border-color .3s;
+  padding: 16px 0;
+  background:
+    radial-gradient(130% 240% at 20% 35%, rgba(64, 124, 255, 0.55) 0%, rgba(38, 86, 214, 0.28) 32%, rgba(38, 86, 214, 0) 62%),
+    radial-gradient(90% 180% at 58% 20%, rgba(24, 70, 190, 0.40) 0%, rgba(24, 70, 190, 0) 55%),
+    linear-gradient(90deg, #0a1640 0%, #0c1f5c 34%, #081334 70%, #050a1e 100%);
+  border-bottom: 1px solid rgba(120, 160, 255, 0.16);
+  box-shadow: 0 12px 40px -24px rgba(0, 0, 0, 0.8);
+  transition: backdrop-filter .3s, background .3s, border-color .3s, box-shadow .3s, padding .3s;
 }
 .nav.scrolled {
-  background: rgba(20, 24, 40, 0.25);
+  padding: 12px 0;
+  background:
+    radial-gradient(130% 240% at 20% 35%, rgba(64, 124, 255, 0.42) 0%, rgba(38, 86, 214, 0.20) 32%, rgba(38, 86, 214, 0) 62%),
+    linear-gradient(90deg, rgba(10, 22, 64, 0.82) 0%, rgba(12, 31, 92, 0.80) 34%, rgba(8, 19, 52, 0.86) 70%, rgba(5, 10, 30, 0.90) 100%);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-strong);
+  box-shadow: 0 18px 50px -28px rgba(0, 0, 0, 0.9);
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -71,6 +81,24 @@ a { color: inherit; text-decoration: none; }
 .brand-name {
   font-family: 'Manrope'; font-weight: 800; font-size: 28px; letter-spacing: -0.025em;
 }
+.brand-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-left: 4px;
+  padding: 5px 11px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(125, 165, 255, 0.22) 0%, rgba(64, 110, 230, 0.12) 100%);
+  border: 1px solid rgba(150, 182, 255, 0.34);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.20), 0 3px 14px -4px rgba(48, 96, 224, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 12.5px;
+  line-height: 1;
+  letter-spacing: 0.13em;
+}
+.brand-badge .bb-pro { color: #ffffff; }
+.brand-badge .bb-max { color: #9bbcff; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link {
   font-family: 'Manrope', sans-serif;
@@ -1331,6 +1359,7 @@ body.intensity-loud .plan-card::before { height: 3px; }
   .brand { gap: 8px; }
   .brand-mark { width: 34px; height: 34px; }
   .brand-name { font-size: 20px; letter-spacing: -0.02em; }
+  .brand-badge { padding: 4px 8px; font-size: 10px; gap: 4px; margin-left: 2px; border-radius: 8px; }
   .nav .btn { padding: 10px 16px; font-size: 14px; gap: 6px; }
   .nav .btn svg { width: 14px; height: 14px; }
   .nav-cta-full { display: none; }

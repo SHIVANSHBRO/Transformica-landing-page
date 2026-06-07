@@ -57,9 +57,9 @@ function CheckoutModal({ open, onClose }) {
           </div>
         </div>
 
-        <button className="btn btn-mint btn-lg" style={{ width: '100%', justifyContent: 'center' }}>
+        <a href="https://rzp.io/rzp/transformica-pro" className="btn btn-mint btn-lg" style={{ width: '100%', justifyContent: 'center' }}>
           Confirm & start 7-day trial <Icon.Arrow size={16} />
-        </button>
+        </a>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: 18, marginTop: 16, color: 'var(--text-3)', fontSize: 11.5, flexWrap: 'wrap' }}>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
@@ -87,9 +87,12 @@ const inputStyle = {
   transition: 'border-color .2s, background .2s',
 };
 
+const RAZORPAY_URL = 'https://rzp.io/rzp/transformica-pro';
+
 function App() {
   const [checkoutOpen, setCheckoutOpen] = React.useState(false);
-  const open = () => setCheckoutOpen(true);
+  // Every payment CTA goes straight to the Razorpay page to shorten checkout.
+  const open = () => { window.location.href = RAZORPAY_URL; };
   const close = () => setCheckoutOpen(false);
 
   return (
