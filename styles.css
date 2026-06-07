@@ -98,17 +98,24 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.13em;
 }
 .brand-badge .bb-pro { color: #ffffff; }
-.brand-badge .bb-max { color: #9bbcff; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link {
+  display: inline-block;
   font-family: 'Manrope', sans-serif;
   color: var(--text-2);
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.015em;
-  transition: color .2s;
+  text-decoration: underline transparent;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  transition: color .2s, transform .2s, text-decoration-color .2s;
 }
-.nav-link:hover { color: var(--text); }
+.nav-link:hover {
+  color: var(--text);
+  transform: scale(1.12);
+  text-decoration-color: var(--mint);
+}
 .nav .btn { font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 700; padding: 14px 24px; }
 @media (max-width: 880px) { .nav-links .nav-link { display: none; } }
 

@@ -13,9 +13,8 @@ function Nav({ onCTAClick }) {
         <a href="#top" className="brand">
           <BrandMark size={44} />
           <span className="brand-name">Transformica</span>
-          <span className="brand-badge" aria-label="Pro Max">
+          <span className="brand-badge" aria-label="Pro">
             <span className="bb-pro">PRO</span>
-            <span className="bb-max">MAX</span>
           </span>
         </a>
         <div className="nav-links">
