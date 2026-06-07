@@ -855,17 +855,13 @@ function Footer() {
           </div>
           <div className="footer-col">
             <h6>Company</h6>
-            <a href="#">About us</a>
-            <a href="#">Our coaches</a>
-            <a href="#">Press</a>
-            <a href="#">Contact</a>
+            <a href="https://transformica.in" target="_blank" rel="noopener">About us</a>
+            <a href="https://wa.me/919899901124" target="_blank" rel="noopener">Contact</a>
           </div>
           <div className="footer-col">
             <h6>Support</h6>
             <a href="#faq">FAQ</a>
-            <a href="#">Guarantee</a>
             <a href="#">Privacy</a>
-            <a href="#">Terms</a>
           </div>
         </div>
         <div className="footer-bottom">
